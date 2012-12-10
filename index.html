@@ -50,7 +50,7 @@
 
 <h1></h1>
 
-<h2>Vulnerability Correlation and Detection Engine (VCAD)</h2>
+<h2>Vulnerability Correlation and Detection Engine (VCAD) for OSSIM</h2>
 
 <p>VCAD is a lightweight vulnerability scanner which is intended for use inside of <a href="http://alienvault.com/">Alienvault</a>'s <a href="http://communities.alienvault.com/indexc.html?utm_expid=61134069-1">OSSIM</a>.</p>
 
@@ -58,16 +58,26 @@
 
 <p>Due to the lack of network probing VCAD is fast.  The time it takes to run VCAD is a direct result of algorithmic complexity (not network latency).  </p>
 
-<p>Currently, the only way to use VCAD is from within an OSSIM instance.  However, abstracting VCAD out of OSSIM is within the realm of possibility.</p>
+<p>Currently, VCAD is designed to work within OSSIM.  However, abstracting VCAD out of OSSIM is within the realm of possibility and something we are interested in.</p>
 
-<p>To use VCAD, get the repository and add the files to the following folders:
-ossimframework/*.py -&gt; /usr/share/ossim-framework/ossimframework/
-<strong>github repo</strong>     ----&gt;   <strong>ossim</strong></p>
+<p>To use VCAD, get the repository and add the files to the following folders:</p>
 
-<p>vulnmeter/sched.php ----&gt;   /usr/share/ossim/www/vulnmeter/sched.php
-conf/main.php       ----&gt;   /usr/share/ossim/www/conf/main.php
-netscan/index.php   ----&gt;   /usr/share/ossim/www/netscan/index.php
-netscan/do_scan.php ----&gt;   /usr/share/ossim/www/netscan/do_scan.php</p>
+<hr><p><strong>github repo</strong>     ----&gt;   <strong>ossim directory</strong></p>
+
+<p>ossimframework/*.py ----&gt;   /usr/share/ossim-framework/ossimframework/</p>
+
+<p>vulnmeter/sched.php ----&gt;   /usr/share/ossim/www/vulnmeter/</p>
+
+<p>conf/main.php       ----&gt;   /usr/share/ossim/www/conf/</p>
+
+<p>netscan/index.php   ----&gt;   /usr/share/ossim/www/netscan/</p>
+
+<p>netscan/do_scan.php ----&gt;   /usr/share/ossim/www/netscan/</p>
+
+<hr><p>Project authors:
+Bill Smartt 
+Scott Finney
+Bin Lu</p>
       </section>
 
       <footer>
