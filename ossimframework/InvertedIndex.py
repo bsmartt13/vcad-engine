@@ -28,14 +28,12 @@
 #
 # Otherwise you can read it here: http://www.gnu.org/licenses/gpl-2.0.txt
 #
-
 '''
 Created on 29 Sep,2012
 
-Author: Bin Lu
-
-converted to OOP by Bill Smartt - 10/20/12
-Write index to file / persistant data storage by Bill Smartt - 10/20/12
+@author: BIN LU
+converted to OOP by Bill
+Write index to file / persistant data storage by Bill
 '''
 
 # we need os to do File I/O, cPickle for serialization (cPickle is a faster more secure implementation of pickle).
@@ -99,21 +97,19 @@ class InvertedIndex:
 	# write inverted index to file
 	def serialize(self):
 		if os.path.exists(self.picklename):
-			self.logger.warn("[!] trying to overwrite pickled index.  try update(self).")
+			self.logger.info("[*] index is already pickled as 'vcad.pkl'.")
 			return False;
 		if len(self.index) == 0:
-			self.logger.warn("[!] trying to pickle an empty index.  use store() first.")
+			self.logger.warn("[!] trying to pickle an empty index.  use buildIndex() first.")
 			return False;
 		# at this point we're ready to pickle.
 		pickle.dump(self.index, open(self.picklename, "wb"))
-		logger.info("[+++] pickle dump complete.")
+		self.logger.info("[+++] pickle dump complete.")
 		return True;
 	# load inverted index from file if it exists.
 	# if !exists, we will build it.
 	def loadIndex(self):
 		if not os.path.exists(self.picklename):
-			picklemsg = "[!] pickled file `" + self.picklename + "` not found!"
-			self.logger.warn(picklemsg)
 			return False;
 		self.index = pickle.load( open(self.picklename, "rb"))
 		self.logger.info("[+++] picle load complete.")

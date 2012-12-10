@@ -344,15 +344,13 @@ class vcad:
 		successful = self.invertedIndex.serialize()
 		if successful:
 			return True;
-		print "[x] ii.serialize() was unable to write index to file."
 		return False;
 		
-	# deprecated.
-	def main(self):
-		print "vcad.main()"
-		v = self.vcad()
-		v.getTimeStamp()
-		return
+def main():
+	v = vcad()
+	v.buildIndex()
+	success = v.persist()
+	return
 
-	if __name__ == '__main__':main()
+if __name__ == '__main__':main()
 	
