@@ -10,21 +10,7 @@ Due to the lack of network probing VCAD is fast.  The time it takes to run VCAD 
 
 Currently, VCAD is designed to work within OSSIM.  However, abstracting VCAD out of OSSIM is within the realm of possibility and something we are interested in.
 
-To use VCAD, get the repository and add the files to the following folders:
-***
-
-
-**github repo**  	---->	**ossim directory**
-
-ossimframework/*.py	---->	/usr/share/ossim-framework/ossimframework/
-
-vulnmeter/sched.php	---->	/usr/share/ossim/www/vulnmeter/
-
-conf/main.php		---->	/usr/share/ossim/www/conf/
-
-netscan/index.php	---->	/usr/share/ossim/www/netscan/
-
-netscan/do_scan.php	---->	/usr/share/ossim/www/netscan/
+To use VCAD, download the files to your ossim instance and run install-vcad.sh.  This will put the files in the correct places and build the lookup table (~1-2 seconds).
 
 
 ***
