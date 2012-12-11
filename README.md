@@ -17,6 +17,6 @@ To use VCAD, download the files to your ossim instance and run install-vcad.sh. 
 
 
 Project authors:
-Bill Smartt <bsmartt13>
-Scott Finney
-Bin Lu
+Bill Smartt <bsmartt13>, 
+Scott Finney, 
+Bin Lu, 
