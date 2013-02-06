@@ -12,7 +12,7 @@ Currently, VCAD is designed to work within OSSIM.  However, abstracting VCAD out
 
 To use VCAD, download the files to your ossim instance and run install-vcad.sh.  This will put the files in the correct places and build the lookup table (~1-2 seconds).
 
-  *Note: VCAD is included in the next release of ossim under the name 'Pasive Vulnerbility AAnalysis'. Please consider upgrading before modifying your ossim configuration to use this scanner.
+  *Note: VCAD is included in the next release of ossim under the name 'Pasive Vulnerbility Analysis'. Please consider upgrading before modifying your ossim configuration to use this scanner.
   
   [Developed on OSSIM 4.1.3]
 
